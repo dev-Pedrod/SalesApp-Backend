@@ -10,12 +10,13 @@ import com.devpedrod.cursomc.repositories.CategoriaRepository;
 
 @Service
 public class CategoriaService {
-	
+
 	@Autowired
 	private CategoriaRepository repo;
-	
-	public Categoria find(Integer id) { 
-		 Optional<Categoria> obj = repo.findById(id); 
-		return obj.orElse(null); 
+
+	public Categoria find(Integer id) {
+		Optional<Categoria> obj = repo.findById(id);
+		return obj.orElseThrow(() -> new com.devpedrod.cursomc.services.exceptions.ObjectNotFoundException(
+				"Objeto não encontrado! Id: " + id + ", Tipo: " + Categoria.class.getName()));
 	}
 }

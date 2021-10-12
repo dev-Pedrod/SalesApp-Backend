@@ -1,4 +1,4 @@
-package com.devpedrod.cursomc.resources.exceptions;
+package com.devpedrod.cursomc.resources.exception;
 
 import javax.servlet.http.HttpServletRequest;
 
@@ -7,7 +7,6 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 
-import com.devpedrod.cursomc.resources.StandardError;
 import com.devpedrod.cursomc.services.exceptions.ObjectNotFoundException;
 
 @ControllerAdvice

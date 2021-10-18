@@ -19,6 +19,7 @@ public class ClienteInsertValidator implements ConstraintValidator<ClienteInsert
 	
 	@Autowired
 	ClienteRepository repo;
+	
 	@Override
 	public void initialize(ClienteInsert ann) { 
 	}

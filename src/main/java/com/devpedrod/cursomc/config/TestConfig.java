@@ -14,6 +14,7 @@ import com.devpedrod.cursomc.services.MockEmailService;
 @Configuration
 @Profile("test")
 public class TestConfig {
+	
 	@Autowired
 	DBService dbService;
 

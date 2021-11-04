@@ -33,7 +33,7 @@ build/
 .vscode/
 
 ### Ignore ###
-.application.properties
-.application-test.properties
-.application-dev.properties
-.application-prod.properties
+/application.properties
+/application-test.properties
+/application-dev.properties
+/application-prod.properties

@@ -44,7 +44,7 @@ public class S3Service {
 			LOG.info("Iniciando upload");
 			s3Client.putObject(bucketName, fileName, is, meta);
 			LOG.info("Upload finalizado");
-			return s3Client.getUrl(fileName, contentType).toURI();
+			return s3Client.getUrl(bucketName, fileName).toURI();
 
 		} catch (URISyntaxException e) {
 			throw new FileException("Erro ao converter URL para URI");

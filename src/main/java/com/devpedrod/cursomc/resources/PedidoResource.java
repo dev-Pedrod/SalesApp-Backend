@@ -18,6 +18,8 @@ import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 import com.devpedrod.cursomc.domain.Pedido;
 import com.devpedrod.cursomc.services.PedidoService;
 
+import io.swagger.annotations.ApiOperation;
+
 @RestController
 @RequestMapping(value = "/pedidos")
 public class PedidoResource {
@@ -25,12 +27,14 @@ public class PedidoResource {
 	@Autowired
 	private PedidoService service;
 
+	@ApiOperation(value="Busca pedido por id")
 	@RequestMapping(value = "/{id}", method = RequestMethod.GET)
 	public ResponseEntity<Pedido> find(@PathVariable Integer id) {
 		Pedido obj = service.find(id);
 		return ResponseEntity.ok().body(obj);
 	}
 	
+	@ApiOperation(value="Insere pedido")
 	@RequestMapping(method = RequestMethod.POST)
 	public ResponseEntity<Void> insert(@Valid @RequestBody Pedido obj) {
 		obj = service.insert(obj);
@@ -39,6 +43,7 @@ public class PedidoResource {
 		return ResponseEntity.created(uri).build();
 	}
 
+	@ApiOperation(value="Busca todos os pedidos com paginação")
 	@RequestMapping(method = RequestMethod.GET)
 	public ResponseEntity<Page<Pedido>> findPage(
 			@RequestParam(value = "page", defaultValue = "0") Integer page,

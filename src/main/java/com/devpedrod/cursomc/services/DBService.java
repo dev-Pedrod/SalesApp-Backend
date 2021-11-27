@@ -66,6 +66,7 @@ public class DBService {
 		Categoria cat5 = new Categoria(null, "Jardinagem");
 		Categoria cat6 = new Categoria(null, "Decoração");
 		Categoria cat7 = new Categoria(null, "Perfumaria");
+		Categoria cat8 = new Categoria(null, "Roupas");
 
 		Produto p1 = new Produto(null, "Computador", 2000.00);
 		Produto p2 = new Produto(null, "Impressora", 800.00);
@@ -178,7 +179,7 @@ public class DBService {
 		p49.getCategorias().addAll(Arrays.asList(cat1));
 		p50.getCategorias().addAll(Arrays.asList(cat1));
 		
-		categoriaRepository.saveAll(Arrays.asList(cat1, cat2, cat3, cat4, cat5, cat6, cat7));
+		categoriaRepository.saveAll(Arrays.asList(cat1, cat2, cat3, cat4, cat5, cat6, cat7, cat8));
 		produtoRepository.saveAll(Arrays.asList(p1, p2, p3, p4, p5, p6, p7, p8, p9, p10, p11, p12, p13, 
 				p14, p15, p16, p17, p18, p19, p20, p21, p22, p23, p24, p25, p26, p27, p28, p29, p30, p31,
 				p32, p34, p35, p36, p37, p38, p39, p40, p41, p42, p43, p44, p45, p46, p47, p48, p49, p50));
@@ -197,7 +198,7 @@ public class DBService {
 		cidadeRepository.saveAll(Arrays.asList(c1, c2, c2));
 		
 		Cliente cli1 = new Cliente(null, "Maria Silva", "nt291874@gmail.com", "36378912377", TipoCliente.PESSOAFISICA, bCryptPasswordEncoder.encode("12345"));
-		Cliente cli2 = new Cliente(null, "Pedro Oliveira", "nf8278354@gmail.com", "30891454055", TipoCliente.PESSOAFISICA, bCryptPasswordEncoder.encode("14354"));
+		Cliente cli2 = new Cliente(null, "Maria Oliveira", "nf8278354@gmail.com", "30891454055", TipoCliente.PESSOAFISICA, bCryptPasswordEncoder.encode("14354"));
 				
 		Endereco e1 = new Endereco(null, "Rua flores","300" , "apto 203", "Jardim", "38220834", cli1, c1);
 		Endereco e2 = new Endereco(null, "Avenida Matos","105" , "Sala 800", "Centro", "38777012", cli1, c2);

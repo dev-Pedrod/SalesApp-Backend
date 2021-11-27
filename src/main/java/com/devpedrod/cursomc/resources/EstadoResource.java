@@ -17,6 +17,8 @@ import com.devpedrod.cursomc.dto.EstadoDTO;
 import com.devpedrod.cursomc.services.CidadeService;
 import com.devpedrod.cursomc.services.EstadoService;
 
+import io.swagger.annotations.ApiOperation;
+
 @RestController
 @RequestMapping(value = "/estados")
 public class EstadoResource {
@@ -27,6 +29,7 @@ public class EstadoResource {
 	@Autowired
 	private CidadeService cidadeService;
 	
+	@ApiOperation(value="Busca todos os estados")
 	@RequestMapping(method = RequestMethod.GET)
 	public ResponseEntity<List<EstadoDTO>> findAll(){
 		List<Estado> estados = service.findAll();
@@ -35,6 +38,7 @@ public class EstadoResource {
 		return ResponseEntity.ok().body(estadosDTO);
 	}
 	
+	@ApiOperation(value="Busca as cidades do estado por id")
 	@RequestMapping(value = "/{estadoId}/cidades",method = RequestMethod.GET)
 	public ResponseEntity<List<CidadeDTO>> findCidades(@PathVariable Integer estadoId){
 		List<Cidade> cidades = cidadeService.findByEstado(estadoId);

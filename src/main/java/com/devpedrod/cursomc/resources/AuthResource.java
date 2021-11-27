@@ -16,6 +16,8 @@ import com.devpedrod.cursomc.security.UserSS;
 import com.devpedrod.cursomc.services.AuthService;
 import com.devpedrod.cursomc.services.UserService;
 
+import io.swagger.annotations.ApiOperation;
+
 @RestController
 @RequestMapping(value = "/auth")
 public class AuthResource {
@@ -25,6 +27,7 @@ public class AuthResource {
 	@Autowired
 	private AuthService service;
 
+	@ApiOperation(value="Atualiza token")
 	@RequestMapping(value = "/refresh_token", method = RequestMethod.POST)
 	public ResponseEntity<Void> refreshToken(HttpServletResponse response) {
 		UserSS user = UserService.authenticated();
@@ -34,6 +37,7 @@ public class AuthResource {
 		return ResponseEntity.noContent().build();
 	}
 	
+	@ApiOperation(value="Retorna uma nova senha")
 	@RequestMapping(value = "/forgot", method = RequestMethod.POST)
 	public ResponseEntity<Void> forgot(@Valid @RequestBody EmailDTO objDTO) {
 		service.sendNewPassword(objDTO.getEmail());

@@ -21,9 +21,9 @@ Here are the technologies used in this project.
 ## Prints
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/dev-Pedrod/SalesApp-Frontend/readme/readImages/login.PNG" hspace="20" width="250"/>
-  <img src="https://github.com/dev-Pedrod/SalesApp-Frontend/blob/readme/readImages/Categorias.PNG" hspace="20" width="250"/> 
-  <img src="https://github.com/dev-Pedrod/SalesApp-Frontend/blob/readme/readImages/Carrinho.PNG" hspace="20" width="250"/>
+  <img src="https://raw.githubusercontent.com/dev-Pedrod/SalesApp-Frontend/readme/readImages/login.PNG" hspace="20" width="230"/>
+  <img src="https://github.com/dev-Pedrod/SalesApp-Frontend/blob/readme/readImages/Categorias.PNG" hspace="20" width="230"/> 
+  <img src="https://github.com/dev-Pedrod/SalesApp-Frontend/blob/readme/readImages/Carrinho.PNG" hspace="20" width="230"/>
 </p>
 
 ---
